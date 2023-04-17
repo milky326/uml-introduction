@@ -1,0 +1,9 @@
+@startuml ユースケース図
+rectangle ホテル{
+usecase 予約
+usecase ログイン
+actor 利用者 #ff00aa;line:DarkBlue;line.bold;
+}
+ログイン<.予約: <<include>>
+利用者 -left->予約
+@enduml
