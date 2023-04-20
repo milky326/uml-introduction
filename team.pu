@@ -1,0 +1,21 @@
+@startuml 就活報告書検索システム
+left to right direction
+actor 学生#DDDDDD;line:Red;line.bold;
+actor 先生#DDDDDD;line:Blue;line.bold;
+actor 就職課#DDDDDD;line:Green;line.bold;
+
+rectangle 就活報告書検索システム {
+usecase 提出申請を登録する
+usecase 報告書を検索する
+usecase (<u>就職課の承認</u>\n拡張点\n提出申請の承認) as input
+usecase 提出申請を却下する
+usecase 提出申請の承認
+}
+input <. 提出申請の承認:<<extend>>
+学生--> 提出申請を登録する
+学生--> 報告書を検索する
+提出申請を却下する <-right- 先生
+提出申請の承認 <-- 先生
+input <-- 就職課
+提出申請を却下する <-- 就職課
+@enduml

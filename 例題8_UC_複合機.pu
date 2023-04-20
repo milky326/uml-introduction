@@ -1,0 +1,12 @@
+@startuml ユースケース図
+left to right direction
+actor 社員 #ff0022;line:DarkGoldenRod;line.bold;
+rectangle 従業員登録システム{
+usecase (<u>社員情報を修正します<u> \nExtenstion Points\n変更届が提出された) as input
+usecase 社員情報を登録します
+usecase 社員情報を参照します
+}
+社員 --> 社員情報を参照します
+社員--> input
+社員--> 社員情報を登録します
+@enduml
