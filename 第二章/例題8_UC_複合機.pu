@@ -1,0 +1,15 @@
+@startuml ユースケース図
+left to right direction
+actor ユーザー #ff0022;line:DarkGoldenRod;line.bold;
+rectangle 複合機{
+usecase 画像をスキャンする
+usecase コピーする
+usecase コンピュータから印刷する
+usecase FAXを送受信する
+}
+ユーザー --> コンピュータから印刷する
+ユーザー --> FAXを送受信する
+ユーザー --> 画像をスキャンする
+ユーザー --> コピーする
+画像をスキャンする .> (コピーする) : <<extend>>
+@enduml
