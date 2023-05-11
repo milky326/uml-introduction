@@ -1,0 +1,14 @@
+@startuml 演習4-2 
+ hide footbox
+participant "利用者:情報入力画面" as user
+participant ":予約画面" as ReservationScreen
+
+activate user
+user ->> ReservationScreen: ログインする（）
+
+activate ReservationScreen
+    ReservationScreen -> ReservationScreen: 認証（）
+    activate ReservationScreen
+deactivate ReservationScreen
+
+@enduml
