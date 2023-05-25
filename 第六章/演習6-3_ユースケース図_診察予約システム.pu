@@ -1,0 +1,16 @@
+@startuml 演習6-3-2
+left to right direction
+actor 患者 #00ff00;line:LimeGreen;line.bold;
+actor 看護師 #82FF00;line:DarkRed;line.bold;
+rectangle 診察予約システム{
+    usecase メニュー画面 #dcdcdc
+    usecase 予約と確認画面 #dcdcdc
+    usecase あなたの順番画面 #dcdcdc
+    usecase 今の順番画面 #dcdcdc
+}
+
+患者 --> メニュー画面
+患者 --> 予約と確認画面
+患者 --> あなたの順番画面
+患者 --> 今の順番画面
+看護師 -up-> 今の順番画面
