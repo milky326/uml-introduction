@@ -1,4 +1,4 @@
-@startuml 演習6-3-2
+@startuml 演習6-3-1
 left to right direction
 actor 患者 #00ff00;line:LimeGreen;line.bold;
 actor 看護師 #82FF00;line:DarkRed;line.bold;
